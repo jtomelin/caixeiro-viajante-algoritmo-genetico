@@ -42,10 +42,10 @@ iag=0; % contador para iniciar a geracao
 while iag<maxit
     iag=iag+1; % incrementa o contador de geracoes
     
-    % Escolha do Pai1 e Pa2 que são escolhidos aleatoriamente do vetor
+    % Escolha do Pai1 e Pa2 que sao escolhidos aleatoriamente do vetor
     % probab
-    escolha1=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indivíduos
-    escolha2=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indivíduos
+    escolha1=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os individuos
+    escolha2=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os individuos
     indPai1=probab(escolha1); % selecionar os indices escolhidos na roleta para o pai 1
     indPai2=probab(escolha2); % selecionar os indices escolhidos na roleta para o pai 2
     
@@ -55,12 +55,12 @@ while iag<maxit
         %seleciona o Pai 2 
        
         
-        % Faz a técnica de recombinação Cycle
+        % Faz a tecnica de recombinacao Cycle
 
     % Faz a Mutacao da populacao
 
    
-    % Se calcula um novo custo para a nova população
+    % Se calcula um novo custo para a nova populacao
     
     
     %_______________________________________________________
