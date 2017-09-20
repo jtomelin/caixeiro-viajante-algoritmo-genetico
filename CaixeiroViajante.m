@@ -2,15 +2,22 @@ close all; clc; clear;
 
 global iag x y
 %% Configuracao Inicial
-npar=20; % numero das variaveis para serem otimizadas (genes)
-Nt=npar; % numero de colunas da matriz de populacao
+cities=20; % numero das variaveis para serem otimizadas (genes)
+Nt=cities; % numero de colunas da matriz de populacao
 
-x=rand(1,npar);
-y=rand(1,npar); % cidades em (cidadeX, cidadeY)
+%PontoX e pontoY de cada cidade - Posicao no plano.
+x=rand(1,cities);
+y=rand(1,cities); % cidades em (cidadeX, cidadeY)
 
-% N = getPointsInPlane(20);
-%X = N(:,1);
-%Y = N(:, 2);
+%Quem e a populacao?
+populacao = getPointsInPlane(cities);
+dist = cvfun(populacao);
+
+
+dist = sort(dist, 1)
+%positions = getPointsInPlane(cities);
+%X = positions(:,1);
+%Y = positions(:, 2);
 %Scatter exibe somente os pontos no plano
 %scatter(X, Y);
 % Hold on necessario para esperar a escrita do scatter
