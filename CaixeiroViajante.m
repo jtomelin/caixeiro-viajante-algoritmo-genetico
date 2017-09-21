@@ -8,6 +8,8 @@ Nt=npar; % numero de colunas da matriz de populacao
 x=rand(1,npar);
 y=rand(1,npar); % cidades em (cidadeX, cidadeY)
 
+matrizPrincipal = funcaoGeraMatriz;
+
 % N = getPointsInPlane(20);
 %X = N(:,1);
 %Y = N(:, 2);
