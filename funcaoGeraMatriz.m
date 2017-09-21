@@ -1,9 +1,7 @@
-function matrizPrincipal = funcaoGeraMatriz
- 
-  matrizAux = randi(20,20,20);
+function matrizPrincipal = funcaoGeraMatriz  
   
   for i=1:21
-    matrizAux(i,:) = randperm(20,20);
+    matrizPrincipal(i,:) = randperm(20,20);
   end
  
 end
