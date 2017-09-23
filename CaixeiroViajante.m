@@ -9,7 +9,7 @@ x=rand(1,npar);
 y=rand(1,npar); % cidades em (cidadeX, cidadeY)
 
 % Adiciona o numero maximo de interacoes (Criterio de Parada)
-maxit = 10000; %reduzir para testes, senão fica muito lento
+maxit = 10000; %reduzir para testes, senao fica muito lento
 
 % Parametros do AG
 % tamanho da populacao
@@ -48,7 +48,7 @@ while iag<maxit
     % calcula o custo minimo da populacao (veja funcao min)
     % calcula a media aritmetica da populacao (veja funcao mean)
     
-    % Escolha do Pai1 e Pa2 que são escolhidos aleatoriamente do vetor
+    % Escolha do Pai1 e Pa2 que sao escolhidos aleatoriamente do vetor
     % probab
     escolha1=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os individuos
     escolha2=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indivi�duos
