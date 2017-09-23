@@ -9,7 +9,7 @@ x=rand(1,npar);
 y=rand(1,npar); % cidades em (cidadeX, cidadeY)
 
 % Adiciona o numero maximo de interacoes (Criterio de Parada)
-maxit = 10; %reduzir para testes, senão fica muito lento
+maxit = 10000; %reduzir para testes, senão fica muito lento
 
 % Parametros do AG
 % tamanho da populacao
