@@ -9,7 +9,7 @@ x=rand(1,npar);
 y=rand(1,npar); % cidades em (cidadeX, cidadeY)
 
 % Adiciona o numero maximo de interacoes (Criterio de Parada)
-maxit = 10000; %reduzir para testes, senão fica muito lento
+maxit = 10; %reduzir para testes, senão fica muito lento
 
 % Parametros do AG
 % tamanho da populacao
@@ -50,8 +50,8 @@ while iag<maxit
     
     % Escolha do Pai1 e Pa2 que são escolhidos aleatoriamente do vetor
     % probab
-    escolha1=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indivíduos
-    escolha2=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indivíduos
+    escolha1=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os individuos
+    escolha2=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indivi�duos
     indPai1=probab(escolha1); % selecionar os indices escolhidos na roleta para o pai 1
     indPai2=probab(escolha2); % selecionar os indices escolhidos na roleta para o pai 2
     
@@ -63,17 +63,12 @@ while iag<maxit
         %seleciona o Pai 2 
         parents(2, :) = populacao(indPai2(1, ic), :);       
         
-        % Faz a técnica de recombinação Cycle
+        % Faz a tecnica de recombinacao Cycle
         children = crossOver(parents);
         result = vertcat(result, children);
     end
     populacao(11:20, :) = result;   
-    % Se calcula um novo custo para a nova população
-    
-    
-    %_______________________________________________________
-    % Organiza em ordem crescente os custos e associa aos parametros
-
+    % Se calcula um novo custo para a nova populacao
 end %iga
 
 %calcular o custo da populacao utilizando a funcao de aptidao
@@ -96,10 +91,13 @@ disp(populacao(1,21));
 disp("Melhor solucao:");
 disp(populacao(1,1:20));
 
-scatter(x(populacao(1,1)), y(populacao(1,1)));
-hold on;
-scatter(x(populacao(1,20)), y(populacao(1,20)));
-hold on;
+%Printa todos os pontos
+for jj=1:npar
+  scatter(x(populacao(1,jj)), y(populacao(1,jj)));
+  hold on;    
+end
+
+%Printa os caminhos da melhor solucao
 plot(x(populacao(1,1:2)), y(populacao(1,1:2)), "color", "black", 
      x(populacao(1,2:3)), y(populacao(1,2:3)), "color", "blue",
      x(populacao(1,3:4)), y(populacao(1,3:4)), "color", "blue",
