@@ -84,6 +84,18 @@ populacao = sortrows(populacao, 21);
 
 %_______________________________________________________
 % Mostrar os resultados
+
+disp("Tamanho da populacao:");
+disp(tamPop);
+disp("Taxa de mutacao:");
+disp(selecao);
+disp("Numero de cidades:");
+disp(npar);
+disp("Melhor custo:");
+disp(populacao(1,21));
+disp("Melhor solucao:");
+disp(populacao(1,1:20));
+
 scatter(x(populacao(1,1)), y(populacao(1,1)));
 hold on;
 scatter(x(populacao(1,20)), y(populacao(1,20)));
