@@ -9,7 +9,7 @@ x=rand(1,npar);
 y=rand(1,npar); % cidades em (cidadeX, cidadeY)
 
 % Adiciona o numero maximo de interacoes (Criterio de Parada)
-maxit = 1000;
+maxit = 10000; %reduzir para testes, sen√£o fica muito lento
 
 % Parametros do AG
 % tamanho da populacao
@@ -48,10 +48,10 @@ while iag<maxit
     % calcula o custo minimo da populacao (veja funcao min)
     % calcula a media aritmetica da populacao (veja funcao mean)
     
-    % Escolha do Pai1 e Pa2 que s„o escolhidos aleatoriamente do vetor
+    % Escolha do Pai1 e Pa2 que s√£o escolhidos aleatoriamente do vetor
     % probab
-    escolha1=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indivÌduos
-    escolha2=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indivÌduos
+    escolha1=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indiv√≠duos
+    escolha2=ceil(Nprobab*rand(1,M)); % escolher aleatoriamente na roleta os indiv√≠duos
     indPai1=probab(escolha1); % selecionar os indices escolhidos na roleta para o pai 1
     indPai2=probab(escolha2); % selecionar os indices escolhidos na roleta para o pai 2
     
@@ -63,12 +63,12 @@ while iag<maxit
         %seleciona o Pai 2 
         parents(2, :) = populacao(indPai2(1, ic), :);       
         
-        % Faz a tÈcnica de recombinaÁ„o Cycle
+        % Faz a t√©cnica de recombina√ß√£o Cycle
         children = crossOver(parents);
         result = vertcat(result, children);
     end
     populacao(11:20, :) = result;   
-    % Se calcula um novo custo para a nova populaÁ„o
+    % Se calcula um novo custo para a nova popula√ß√£o
     
     
     %_______________________________________________________
