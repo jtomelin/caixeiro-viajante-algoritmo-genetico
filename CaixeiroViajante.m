@@ -44,9 +44,7 @@ while iag<maxit
     % colocar o custo minimo no elemento 1 (Veja funcao sort)
     % organizar a populacao com o custo mais baixo primeiro
     populacao = sortrows(populacao, 21);
-    populacao = populacao(:, 1:20);
-    % calcula o custo minimo da populacao (veja funcao min)
-    % calcula a media aritmetica da populacao (veja funcao mean)
+    populacao = populacao(:, 1:20);        
     
     % Escolha do Pai1 e Pa2 que sao escolhidos aleatoriamente do vetor
     % probab
@@ -67,8 +65,7 @@ while iag<maxit
         children = crossOver(parents);
         result = vertcat(result, children);
     end
-    populacao(11:20, :) = result;   
-    % Se calcula um novo custo para a nova populacao
+    populacao(11:20, :) = result;       
 end %iga
 
 %calcular o custo da populacao utilizando a funcao de aptidao
